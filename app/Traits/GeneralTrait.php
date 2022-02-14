@@ -1323,9 +1323,9 @@ trait GeneralTrait
                 //     ->paginate($request->paginateCount);
 
                 $chat_rooms = Message::where('user_id', Auth::user()->id)
-                    ->whereHas('masafr.trips', function ($q) {
-                        $q->where('end_date', '>', Carbon\Carbon::now());
-                    })
+                    // ->whereHas('masafr.trips', function ($q) {
+                    //     $q->where('end_date', '>', Carbon\Carbon::now());
+                    // })
                     ->with(['masafr' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
@@ -1338,9 +1338,9 @@ trait GeneralTrait
                 //     ->paginate($request->paginateCount);
 
                 $chat_rooms = Message::where('masafr_id', Auth::user()->id)
-                    ->whereHas('masafr.trips', function ($q) {
-                        $q->where('end_date', '>', Carbon\Carbon::now());
-                    })
+                    // ->whereHas('masafr.trips', function ($q) {
+                    //     $q->where('end_date', '>', Carbon\Carbon::now());
+                    // })
                     ->with(['user' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
