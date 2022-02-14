@@ -1,0 +1,26 @@
+{
+    "subject": "test adversting",
+    "link": "www.facebook.com",
+    "site_after_announcement": 5,
+    "appear_time":4,
+    "daily_repeat":6,
+    "image": "asdf.jpg",
+    "animation_type":1,
+    "person_target":3,
+    "users": [
+        "0123456789","0123456789","0123456789","0123456789","0123456789"
+    ],
+    "masafrs":[
+        "0123456789","0123456789","0123456789","0123456789","0123456789"
+    ],
+    "all_days":0,
+    "days":[
+        1,3,5
+    ],
+    "user_places":[
+        1,2,3
+    ],
+    "masafr_places":[
+        1,2,3
+    ]
+}

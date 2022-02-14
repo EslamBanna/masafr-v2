@@ -1,0 +1,2983 @@
+{
+	"info": {
+		"_postman_id": "5a83da90-06a2-49eb-9b62-2dba32b00486",
+		"name": "masafr host",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"012345678935667\",\r\n    \"password\": \"eslam1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/user/login",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"01234567893\",\r\n    \"password\": \"eslam123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/login",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzQ0MTU0OSwiZXhwIjoxNjMzNDQ1MTQ5LCJuYmYiOjE2MzM0NDE1NDksImp0aSI6ImFmWkpjOUhQeWJzQUJ4WEQiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.-VTIOj9aqqZWLARMc8_193xdWR6PFhfjAvi2jAQS16w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-user-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get masafr info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbXNhZnIud2Utd29yay5wcm9cL2FwaVwvbWFzYWZyXC9sb2dpbiIsImlhdCI6MTYzNTU5MzAwMywiZXhwIjoxNjM1ODkzMDAzLCJuYmYiOjE2MzU1OTMwMDMsImp0aSI6IlM0Z0xsaGJIbHZvbUF1QU4iLCJzdWIiOjEsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.vNhVuA9nGpp48kUJBslrMLzqbNBKwts8si9gSyxdJco",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-user-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/web/images/12.jpg"
+						},
+						{
+							"key": "email",
+							"value": "eslamelbanna02@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123654789",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "eslam2",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "eslam1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/user/create-account",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"user",
+						"create-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user verify account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\" : 0,\r\n    \"id\": 1,\r\n    \"code\" : \"513925\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/user/varify-account",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"user",
+						"varify-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new masafr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "eslamelbanna02@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123456789",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test  masafr2",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "eslam123",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/web/images/11.jpg"
+						},
+						{
+							"key": "country_code",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/create-account",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"create-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr verify account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\" : 1,\r\n    \"id\": 1,\r\n    \"code\" : \"678111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/varify-account",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"varify-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user store transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjUwNTYyOSwiZXhwIjoxNjMyNTA5MjI5LCJuYmYiOjE2MzI1MDU2MjksImp0aSI6IjhxVHpKRjJWZVZrQU16aDEiLCJzdWIiOjIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cQ7eJerO_OeeO9pLpfvu59lRd6c2Y4qIeXhpDloC9rE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\" : \"50 dollar to mohamed ali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "lhttps://msafr.we-work.pro/api/auth/user/store-transaction",
+					"protocol": "lhttps",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"store-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr store transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNTA4MzIwLCJleHAiOjE2MzI1MTE5MjAsIm5iZiI6MTYzMjUwODMyMCwianRpIjoiVUwwN3c1VURaQzRJeWpFSyIsInN1YiI6MTcsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.ePBM_VLEOXjHRaeHseZncMnDehsCEcZbm40gVAHws3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\" : \"50 dollar to mohamed ali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/store-transaction",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"store-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjQxOTQwNSwiZXhwIjoxNjMyNDIzMDA1LCJuYmYiOjE2MzI0MTk0MDUsImp0aSI6ImU5OE5pQ0RPM3RueFN2Q1kiLCJzdWIiOjQsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.LDvhmZ2zQhay57mC7yzM2zMknh_Uc-4dfqEdTV-BPjI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-transactions",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get masafr transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNTA4MzIwLCJleHAiOjE2MzI1MTE5MjAsIm5iZiI6MTYzMjUwODMyMCwianRpIjoiVUwwN3c1VURaQzRJeWpFSyIsInN1YiI6MTcsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.ePBM_VLEOXjHRaeHseZncMnDehsCEcZbm40gVAHws3w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-transactions",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjQxNTQ5NiwiZXhwIjoxNjMyNDE5MDk2LCJuYmYiOjE2MzI0MTU0OTYsImp0aSI6Ikd6RUk1d0NqbEtSUGwxWm4iLCJzdWIiOjQsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.7unXhVfRDgPlzepNRx-mVy1kDzMGnf2N0GkUatjJ8p4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/logout",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout masafr",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMxOTkwODUxLCJleHAiOjE2MzE5OTQ0NTEsIm5iZiI6MTYzMTk5MDg1MSwianRpIjoiVWVrQ0RYcTFmZXhmZTdGZiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.0bOfzW_R0AU4M3dPtgTq8i5QA-4N7xFooQEDyeP1tRU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/logout",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer services",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test test2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "help2",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "lorem test text here without attachment2",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": "/F:/web/images/10.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/common/customer-services",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"common",
+						"customer-services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user make comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjUwNTYyOSwiZXhwIjoxNjMyNTA5MjI5LCJuYmYiOjE2MzI1MDU2MjksImp0aSI6IjhxVHpKRjJWZVZrQU16aDEiLCJzdWIiOjIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cQ7eJerO_OeeO9pLpfvu59lRd6c2Y4qIeXhpDloC9rE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"masafr_id\":1,\r\n    \"subject\": \"he is very good user3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/make-comment",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"make-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr make comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNTA4MzIwLCJleHAiOjE2MzI1MTE5MjAsIm5iZiI6MTYzMjUwODMyMCwianRpIjoiVUwwN3c1VURaQzRJeWpFSyIsInN1YiI6MTcsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.ePBM_VLEOXjHRaeHseZncMnDehsCEcZbm40gVAHws3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":1,\r\n    \"subject\": \"he is very good user3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/make-comment",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"make-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjUwNTYyOSwiZXhwIjoxNjMyNTA5MjI5LCJuYmYiOjE2MzI1MDU2MjksImp0aSI6IjhxVHpKRjJWZVZrQU16aDEiLCJzdWIiOjIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cQ7eJerO_OeeO9pLpfvu59lRd6c2Y4qIeXhpDloC9rE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": 0,\r\n    \"pesron_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-comments",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr get comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNDE5MzU4LCJleHAiOjE2MzI0MjI5NTgsIm5iZiI6MTYzMjQxOTM1OCwianRpIjoicEJOTXhXZHJRSldLaVRjRiIsInN1YiI6MTQsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.JiFLabkT1yQnPr4vy3_jTLYDDgMyF9IMq5cBXLAKxwg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": 1,\r\n    \"pesron_id\":14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-comments",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMTk5NTI0MSwiZXhwIjoxNjMxOTk4ODQxLCJuYmYiOjE2MzE5OTUyNDEsImp0aSI6IlFHSHdGRWJRUGlUanpsaVAiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.u06gGI_JuNRW_h6iIZUzwXvlmN178B9V6NA57mCk9iE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"subject\": \"changed comment3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/update-comment",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"update-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr update comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMTk5NTI0MSwiZXhwIjoxNjMxOTk4ODQxLCJuYmYiOjE2MzE5OTUyNDEsImp0aSI6IlFHSHdGRWJRUGlUanpsaVAiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.u06gGI_JuNRW_h6iIZUzwXvlmN178B9V6NA57mCk9iE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"subject\": \"changed comment3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/update-comment",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"update-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbXNhZnIud2Utd29yay5wcm9cL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE2MzUzMzc2NDYsImV4cCI6MTYzNTYzNzY0NiwibmJmIjoxNjM1MzM3NjQ2LCJqdGkiOiJHY2dadkI3OGN6Z3dwM05rIiwic3ViIjoxLCJwcnYiOiJiOTEyNzk5NzhmMTFhYTdiYzU2NzA0ODdmZmYwMWUyMjgyNTNmZTQ4In0.Tp_cO8WKyTUTbEY8xkS_HPpbUlxsY8Lw4sXrnhrzuQE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "eslam22",
+							"type": "text"
+						},
+						{
+							"key": "national_id_number",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "id_photo",
+							"type": "file",
+							"src": "/F:/web/images/4.jpg"
+						},
+						{
+							"key": "email",
+							"value": "es@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "eslam123",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/update-user-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"update-user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update masafr info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNDI5Mjk1LCJleHAiOjE2MzI0MzI4OTUsIm5iZiI6MTYzMjQyOTI5NSwianRpIjoiNEo0N3hlcFlSQmVGZVlxeSIsInN1YiI6MTYsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.gVhP1qjIZKHpESwo5zd_v2pTt9GMphf89fzZsceH33g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "eslam3",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/web/images/11.gif"
+						},
+						{
+							"key": "national_id_number",
+							"value": "33863863",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_photo",
+							"type": "file",
+							"src": "/F:/web/images/3.gif"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/update-masafr-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"update-masafr-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user make complain",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzYzMTc2MSwiZXhwIjoxNjMzNjM1MzYxLCJuYmYiOjE2MzM2MzE3NjEsImp0aSI6IkZLNURkcDNYR0VUV1h6VTIiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.g8LNTTNIv1RWUO7u4hUU4gdrnHEE5O5Pf9OdyeQwXWU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "masafr_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "he take money5 from me i'am user",
+							"type": "text"
+						},
+						{
+							"key": "attach",
+							"type": "file",
+							"src": "/F:/web/images/9.jpg"
+						},
+						{
+							"key": "related_trip",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "related_request_service",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/make-complain",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"make-complain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafar make complain",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyNDI2NDExLCJleHAiOjE2MzI0MzAwMTEsIm5iZiI6MTYzMjQyNjQxMSwianRpIjoibVUyb29kUUNTNldiOWpObyIsInN1YiI6MTYsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.rneq_HFKL_Hga5t-d43P0LNEJswwlbCAlARvg5MhymE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "he doesnot give me any thing ia'm masafr3",
+							"type": "text"
+						},
+						{
+							"key": "attach",
+							"type": "file",
+							"src": "/F:/web/images/22.jpg"
+						},
+						{
+							"key": "related_trip",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "related_request_service",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/make-complain",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"make-complain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get complains",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzAzNDEyOCwiZXhwIjoxNjMzMDM3NzI4LCJuYmYiOjE2MzMwMzQxMjgsImp0aSI6IkdGVVMyWDVIYm5vWkNCbDQiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.XPiWU5SpEbeWkK78VD142XyxKPpzutBMTj8QBAsaHpY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-complains?user_id=1&masafr_id=1&related_trip=1&related_request_service=1",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-complains"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "masafr_id",
+							"value": "1"
+						},
+						{
+							"key": "related_trip",
+							"value": "1"
+						},
+						{
+							"key": "related_request_service",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr get complains",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMyMDYyMjExLCJleHAiOjE2MzIwNjU4MTEsIm5iZiI6MTYzMjA2MjIxMSwianRpIjoiNHVwbjhSYXpuRzcxbUVrSSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.NXPnVa_9-mVZAk7Dpw-bZnoCCWYovZinNafHQF3pbiA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-complains?user_id=1&masafr_id=1",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-complains"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "masafr_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr create trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MDA0OTc5LCJleHAiOjE2MzUzMDQ5NzksIm5iZiI6MTYzNTAwNDk3OSwianRpIjoiYzNxSWI0ZHJmVFZ3azlKMSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.S-oCWeZTsSi4sIsVc6dM_H1PFPxjePfXU1JzVgcyyWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"type_of_trips\": 4,\r\n       \"type_of_services\": 7,\r\n       \"from_place\": \"shibin\",\r\n       \"from_longitude\": \"12.3651\",\r\n       \"from_latitude\": \"30.25315\",\r\n       \"description\": \"test disciption\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/create-trip",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"create-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update trip info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDU5NjE1LCJleHAiOjE2MzM0NjMyMTUsIm5iZiI6MTYzMzQ1OTYxNSwianRpIjoiQTZmaHV6RVhhcngyMks2ZiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.GXSHVfTeAIQKve0qzMvHSpj7ZfwB1EiqcTJ2jFTcRbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"active\":1,\r\n       \"only_women\": 1,\r\n       \"type_of_trips\": 2,\r\n       \"type_of_services\": 5,\r\n       \"from_place\": \"tanta\",\r\n       \"from_longitude\": \"12.3651\",\r\n       \"from_latitude\": \"30.25315\",\r\n       \"description\": \"test disciption\",\r\n       \"to_place\": \"alex\",\r\n       \"to_longitude\": \"50.635154\",\r\n       \"to_latitude\": \"45.353\",\r\n       \"trip_ways\":[\r\n        {\r\n            \"place\": \"kom hammada\",\r\n            \"time\": \"2021-09-18\"\r\n        },\r\n        {\r\n            \"place\": \"damanhour\",\r\n            \"time\": \"2021-09-19\"\r\n        }\r\n    ],\r\n    \"trip_days\":[\r\n      1,3,5\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/update-trip",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"update-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDU5NjE1LCJleHAiOjE2MzM0NjMyMTUsIm5iZiI6MTYzMzQ1OTYxNSwianRpIjoiQTZmaHV6RVhhcngyMks2ZiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.GXSHVfTeAIQKve0qzMvHSpj7ZfwB1EiqcTJ2jFTcRbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/delete-trip",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"delete-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get masafr trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjA4ODI2MCwiZXhwIjoxNjMyMDkxODYwLCJuYmYiOjE2MzIwODgyNjAsImp0aSI6ImV5Q2ZkWFRvMlAxNDVhSFkiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.sHbdjbruzNxwButZJIeDJNZCg08i4VjST7EXQQeQhag",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-trip",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all trips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/user/all-trips",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"user",
+						"all-trips"
+					],
+					"query": [
+						{
+							"key": "paginateCount",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user make request service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTAwNDkwNSwiZXhwIjoxNjM1MzA0OTA1LCJuYmYiOjE2MzUwMDQ5MDUsImp0aSI6InpxRzgyQnplYjUya05hWnoiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.3NsJx9a82uARkU-E8xO42XcI4IDP-sjvAQ73JZw7Rns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type_of_trips",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type_of_services",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "from_place",
+							"value": "tala",
+							"type": "text"
+						},
+						{
+							"key": "from_longitude",
+							"value": "24565",
+							"type": "text"
+						},
+						{
+							"key": "from_latitude",
+							"value": "22515142",
+							"type": "text"
+						},
+						{
+							"key": "max_day",
+							"value": "2020-10-20",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/web/images/8.jpg"
+						},
+						{
+							"key": "description",
+							"value": "sfvssfv",
+							"type": "text"
+						},
+						{
+							"key": "only_women",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/create-request-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"create-request-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user delet request service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzQ1Nzg3MywiZXhwIjoxNjMzNDYxNDczLCJuYmYiOjE2MzM0NTc4NzMsImp0aSI6InhYeERsSHdnQnR0ZXE3c2MiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.LdDPjch4JwdruG35cIz72003PlBx7_TGQKI9RIZ7qIw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/delete-request-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"delete-request-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user request service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbXNhZnIud2Utd29yay5wcm9cL2FwaVwvbWFzYWZyXC9sb2dpbiIsImlhdCI6MTYzNTU5MzAwMywiZXhwIjoxNjM1ODkzMDAzLCJuYmYiOjE2MzU1OTMwMDMsImp0aSI6IlM0Z0xsaGJIbHZvbUF1QU4iLCJzdWIiOjEsInBydiI6IjhmMDIzOTcxYjFkMDc5MjZiZGEwMDc5YmVlYjlhN2Q5NTQ0ZDI1NzUifQ.vNhVuA9nGpp48kUJBslrMLzqbNBKwts8si9gSyxdJco",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-request-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-request-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all request services of user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"saudi\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/all-request-services",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"all-request-services"
+					],
+					"query": [
+						{
+							"key": "paginateCount",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add info to masafr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "national_id_number",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "nationality",
+							"value": "egyption",
+							"type": "text"
+						},
+						{
+							"key": "car_name",
+							"value": "M-200",
+							"type": "text"
+						},
+						{
+							"key": "car_model",
+							"value": "mercides",
+							"type": "text"
+						},
+						{
+							"key": "car_number",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "id_photo",
+							"type": "file",
+							"src": "/F:/web/images/14.jpg"
+						},
+						{
+							"key": "driving_license_photo",
+							"type": "file",
+							"src": "/F:/web/images/21.jpg"
+						},
+						{
+							"key": "car_image_east",
+							"type": "file",
+							"src": "/F:/web/images/17.jpg"
+						},
+						{
+							"key": "car_image_west",
+							"type": "file",
+							"src": "/F:/web/images/38.jpg"
+						},
+						{
+							"key": "car_image_north",
+							"type": "file",
+							"src": "/F:/web/images/58.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/add-masafr-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"add-masafr-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user notifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNDM5MzYxMywiZXhwIjoxNjM0Mzk3MjEzLCJuYmYiOjE2MzQzOTM2MTMsImp0aSI6ImFMemNqeVU1Z0pWQzNkQlAiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.iZb7w2r7GGaEnH4tYvEFm7z9JghFNHe5L-IsT2EZIpM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paginateCount\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-notifications",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get masafr notifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjE1NjU3LCJleHAiOjE2MzM2MTkyNTcsIm5iZiI6MTYzMzYxNTY1NywianRpIjoic0RFUlNYN3hqa3EwUkxJaiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.5JYXar6ckG8smiY3Lh4a_juA6_0XUYGPWQV2f2MZnko",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-notifications",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-notifications"
+					],
+					"query": [
+						{
+							"key": "paginateCount",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user delete notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNDM4OTkzMSwiZXhwIjoxNjM0MzkzNTMxLCJuYmYiOjE2MzQzODk5MzEsImp0aSI6IjRCNU15ZWlvaFdJOHhPOEsiLCJzdWIiOjMsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cZk7SWi6T87VkuuHe5sbQsIDqyL9FISwi0lEZUG2wmQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"notifications\":[\r\n        1,2,3\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/delete-notification",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"delete-notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr delete notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzQ1MTU4MCwiZXhwIjoxNjMzNDU1MTgwLCJuYmYiOjE2MzM0NTE1ODAsImp0aSI6ImlyM2FzT1h0bWdFSm90NVIiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.JBPdbNwSudaEyXjhhl3mXSVaVhjOdiUF9LhAyd7Ckic",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"notifications\":[\r\n        1,2,3\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/delete-notification",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"delete-notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user send message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzYxNTIwNSwiZXhwIjoxNjMzNjE4ODA1LCJuYmYiOjE2MzM2MTUyMDUsImp0aSI6ImVzT2Z3QTJHN000Z1FVNjkiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.NW73kkcoMc3ixJXI32mR_kfAsLf2Ge5myaNd6SBpFyI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"masafr_id\": 1,\r\n    \"related_trip\": 1,\r\n    \"related_request_service\": 1,\r\n    \"subject\": \"sad2\",\r\n    \"attach\": \":(2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/send-message",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"send-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr send message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjE1NjU3LCJleHAiOjE2MzM2MTkyNTcsIm5iZiI6MTYzMzYxNTY1NywianRpIjoic0RFUlNYN3hqa3EwUkxJaiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.5JYXar6ckG8smiY3Lh4a_juA6_0XUYGPWQV2f2MZnko",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"related_trip\": 1,\r\n    \"related_request_service\": 1,\r\n    \"subject\": \"welcome bro2\",\r\n    \"attach\": \":)2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/send-message",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"send-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr get messages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjE1NjU3LCJleHAiOjE2MzM2MTkyNTcsIm5iZiI6MTYzMzYxNTY1NywianRpIjoic0RFUlNYN3hqa3EwUkxJaiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.5JYXar6ckG8smiY3Lh4a_juA6_0XUYGPWQV2f2MZnko",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"masafr_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-messages",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get messages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzYxNTIwNSwiZXhwIjoxNjMzNjE4ODA1LCJuYmYiOjE2MzM2MTUyMDUsImp0aSI6ImVzT2Z3QTJHN000Z1FVNjkiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.NW73kkcoMc3ixJXI32mR_kfAsLf2Ge5myaNd6SBpFyI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"masafr_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-messages",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search a trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTEwNTA4NywiZXhwIjoxNjM1NDA1MDg3LCJuYmYiOjE2MzUxMDUwODcsImp0aSI6IjEwSFhnNGtja3pwWGNLOEMiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.6gAMVyBYJ4GqB1l86khpeGNUHhZW72nvMGztgPFlozo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type_of_trips\": 1,\r\n    \"from_place\": \"sh\",\r\n    \"to_place\": \"ca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/search-trips",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"search-trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search a request service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MTA3MTE5LCJleHAiOjE2MzU0MDcxMTksIm5iZiI6MTYzNTEwNzExOSwianRpIjoiNkp6M1c1Nm5lZDZvUE9WSCIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.bWyhsH2_1O7Hzs6_5a2l8dwv8BCYCm7rhs28KeUbbMw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type_of_trips\": 2,\r\n    \"from_place\": \"tanta\",\r\n    \"to_place\": \"alex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/search-request-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"search-request-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create free service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDQ2MzU0LCJleHAiOjE2MzM0NDk5NTQsIm5iZiI6MTYzMzQ0NjM1NCwianRpIjoidFFCcDl6eHFvZHNjN05TSSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.66hFvwzT-APK9ZMN7XpHAvKwFPnc_xe18AaXiTjXZD8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"توصيل علاج\",\r\n    \"photo\": \"abc.png\",\r\n    \"description\": \"test description\",\r\n    \"places\":\r\n    [\r\n            {\r\n            \"place\": \"cairo\"\r\n            },\r\n            {\r\n            \"place\": \"tanta\"  \r\n            },\r\n            {\r\n            \"place\": \"kom hammada\"  \r\n            }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/create-free-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"create-free-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get my free services",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDQ2MzU0LCJleHAiOjE2MzM0NDk5NTQsIm5iZiI6MTYzMzQ0NjM1NCwianRpIjoidFFCcDl6eHFvZHNjN05TSSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.66hFvwzT-APK9ZMN7XpHAvKwFPnc_xe18AaXiTjXZD8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"توصيل علاج\",\r\n    \"photo\": \"abc.png\",\r\n    \"description\": \"test description\",\r\n    \"places\":\r\n    [\r\n            {\r\n            \"place\": \"cairo\"\r\n            },\r\n            {\r\n            \"place\": \"tanta\"  \r\n            },\r\n            {\r\n            \"place\": \"kom hammada\"  \r\n            }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-my-free-services",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-my-free-services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update free service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDQyNTQ3LCJleHAiOjE2MzM0NDYxNDcsIm5iZiI6MTYzMzQ0MjU0NywianRpIjoiRG9wbndaYnJoWjRBOERSQiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.AGAMKGhwAWydQz1XvXVdvbA_TbD-1TTlcEUWHacJ5vU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"type\": \"توصيل علاج1\",\r\n    \"photo\": \"abc.png\",\r\n    \"description\": \"test description1\",\r\n    \"places\":\r\n    [\r\n        \"cairo3\",\"tanta3\",\"kom hammada3\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/update-free-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"update-free-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete free service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNDQyNTQ3LCJleHAiOjE2MzM0NDYxNDcsIm5iZiI6MTYzMzQ0MjU0NywianRpIjoiRG9wbndaYnJoWjRBOERSQiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.AGAMKGhwAWydQz1XvXVdvbA_TbD-1TTlcEUWHacJ5vU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/delete-free-service",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"delete-free-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all free services",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMjUwNTYyOSwiZXhwIjoxNjMyNTA5MjI5LCJuYmYiOjE2MzI1MDU2MjksImp0aSI6IjhxVHpKRjJWZVZrQU16aDEiLCJzdWIiOjIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cQ7eJerO_OeeO9pLpfvu59lRd6c2Y4qIeXhpDloC9rE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/all-free-services",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"all-free-services"
+					],
+					"query": [
+						{
+							"key": "paginateCount",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search free service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/search-free-service?type=م",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"search-free-service"
+					],
+					"query": [
+						{
+							"key": "paginateCount",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "م"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user confirm window from th admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/confirm-admin-window",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"confirm-admin-window"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr confirm window from th admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/confirm-admin-window",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"confirm-admin-window"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all main user request categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/get-all-main-request-categorires",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"get-all-main-request-categorires"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all main masafr trip categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjk3NzQ2LCJleHAiOjE2MzM3MDEzNDYsIm5iZiI6MTYzMzY5Nzc0NiwianRpIjoiQ1VjQkV3SGdvZTkwWm1tUSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.d8dTpGgT2lp6z-fqJCW47f1wc27tuWQSJuVll1IvYXA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/get-all-main-trip-categorires",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"get-all-main-trip-categorires"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr resend verfiy code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"type\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/masafr/resend-verfiy-code",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"masafr",
+						"resend-verfiy-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user resend verfiy code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"type\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/user/resend-verfiy-code",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"user",
+						"resend-verfiy-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create fatoorah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MDA0OTc5LCJleHAiOjE2MzUzMDQ5NzksIm5iZiI6MTYzNTAwNDk3OSwianRpIjoiYzNxSWI0ZHJmVFZ3azlKMSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.S-oCWeZTsSi4sIsVc6dM_H1PFPxjePfXU1JzVgcyyWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chat_id\":1,\r\n    \"fatoorahs\":[\r\n        {\r\n            \"subject\": \"buy\",\r\n            \"value\": 50\r\n        },\r\n         {\r\n            \"subject\": \"try\",\r\n            \"value\": 60\r\n        },\r\n         {\r\n            \"subject\": \"send\",\r\n            \"value\": 70\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/create-fatoorah",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"create-fatoorah"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update fatoorah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MDA0OTc5LCJleHAiOjE2MzUzMDQ5NzksIm5iZiI6MTYzNTAwNDk3OSwianRpIjoiYzNxSWI0ZHJmVFZ3azlKMSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.S-oCWeZTsSi4sIsVc6dM_H1PFPxjePfXU1JzVgcyyWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"chat_id\":1,\r\n    \"fatoorahs\":[\r\n        {\r\n            \"subject\": \"buy\",\r\n            \"value\": 55\r\n        },\r\n         {\r\n            \"subject\": \"try\",\r\n            \"value\": 66\r\n        },\r\n         {\r\n            \"subject\": \"send\",\r\n            \"value\": 77\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/update-fatoorah",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"update-fatoorah"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user resopnse to fatoorah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTAwNDkwNSwiZXhwIjoxNjM1MzA0OTA1LCJuYmYiOjE2MzUwMDQ5MDUsImp0aSI6InpxRzgyQnplYjUya05hWnoiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.3NsJx9a82uARkU-E8xO42XcI4IDP-sjvAQ73JZw7Rns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fatoorah_list_id\": 21,\r\n    \"message_id\": 1,\r\n    \"payment_method\":1,\r\n    \"accept\": 1,\r\n    \"copon\": \"ESLAM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/resopnse-to-fatoorah",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"resopnse-to-fatoorah"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr negotition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MDA0OTc5LCJleHAiOjE2MzUzMDQ5NzksIm5iZiI6MTYzNTAwNDk3OSwianRpIjoiYzNxSWI0ZHJmVFZ3azlKMSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.S-oCWeZTsSi4sIsVc6dM_H1PFPxjePfXU1JzVgcyyWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chat_id\": 1,\r\n    \"trip_id\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user negotition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTAwNDkwNSwiZXhwIjoxNjM1MzA0OTA1LCJuYmYiOjE2MzUwMDQ5MDUsImp0aSI6InpxRzgyQnplYjUya05hWnoiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.3NsJx9a82uARkU-E8xO42XcI4IDP-sjvAQ73JZw7Rns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\": 1,\r\n    \"chat_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finish negotition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MDA0OTc5LCJleHAiOjE2MzUzMDQ5NzksIm5iZiI6MTYzNTAwNDk3OSwianRpIjoiYzNxSWI0ZHJmVFZ3azlKMSIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.S-oCWeZTsSi4sIsVc6dM_H1PFPxjePfXU1JzVgcyyWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"delivery_code\": 442290,\r\n    \"message_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/finish-negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"finish-negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr send cancel negtiation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjk1NTU3LCJleHAiOjE2MzM2OTkxNTcsIm5iZiI6MTYzMzY5NTU1NywianRpIjoic2tJeTE3OXJvZ3NLc1BqYiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.X0uXSUj95m2AY0ZHsQD4lLFgNLAURuLZcUtR-1WaZuI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"message_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/send-cancel-negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"send-cancel-negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user send cancel negtiation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTAwNDkwNSwiZXhwIjoxNjM1MzA0OTA1LCJuYmYiOjE2MzUwMDQ5MDUsImp0aSI6InpxRzgyQnplYjUya05hWnoiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.3NsJx9a82uARkU-E8xO42XcI4IDP-sjvAQ73JZw7Rns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/send-cancel-negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"send-cancel-negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user cancel negtiation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTAwNDkwNSwiZXhwIjoxNjM1MzA0OTA1LCJuYmYiOjE2MzUwMDQ5MDUsImp0aSI6InpxRzgyQnplYjUya05hWnoiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.3NsJx9a82uARkU-E8xO42XcI4IDP-sjvAQ73JZw7Rns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"message_id\":1,\r\n    \"accept\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/cancel-negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"cancel-negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr cancel negtiation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjk1NTU3LCJleHAiOjE2MzM2OTkxNTcsIm5iZiI6MTYzMzY5NTU1NywianRpIjoic2tJeTE3OXJvZ3NLc1BqYiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.X0uXSUj95m2AY0ZHsQD4lLFgNLAURuLZcUtR-1WaZuI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"message_id\":1,\r\n    \"accept\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/cancel-negotiation",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"cancel-negotiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzY5NDI0MCwiZXhwIjoxNjMzNjk3ODQwLCJuYmYiOjE2MzM2OTQyNDAsImp0aSI6InNheXZ0M1I4NHg2MHNVWXEiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.xGyyLqxbEXQJqEe02KGn95UuNRWPeTyBZvnXmMlpPr8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/masafr-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"masafr-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNjk1NTU3LCJleHAiOjE2MzM2OTkxNTcsIm5iZiI6MTYzMzY5NTU1NywianRpIjoic2tJeTE3OXJvZ3NLc1BqYiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.X0uXSUj95m2AY0ZHsQD4lLFgNLAURuLZcUtR-1WaZuI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/user-info",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "masafr pronunciation statement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjMzNzIyNjc0LCJleHAiOjE2MzM3MjYyNzQsIm5iZiI6MTYzMzcyMjY3NCwianRpIjoiYVpGZ1Z5aTkyMEpOb2E3QiIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.h5ucGHeF6cDM48E5hSSaoKv05C6DDg2XhslSACBkW80",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"moneeyyy\",\r\n    \"chat_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/pronunciation-statement",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"pronunciation-statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user pronunciation statement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzMzcyMjcyOCwiZXhwIjoxNjMzNzI2MzI4LCJuYmYiOjE2MzM3MjI3MjgsImp0aSI6InJSblpqODJiOTM4Tjd1UUciLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.OsIdUYNTfT9gfavVJvjvKUliHxIAnAvTjvmP74cMfSA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"moneeyyy\",\r\n    \"chat_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/pronunciation-statement",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"pronunciation-statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYzNTEwNTA4NywiZXhwIjoxNjM1NDA1MDg3LCJuYmYiOjE2MzUxMDUwODcsImp0aSI6IjEwSFhnNGtja3pwWGNLOEMiLCJzdWIiOjEsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.6gAMVyBYJ4GqB1l86khpeGNUHhZW72nvMGztgPFlozo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balance\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/user/update-balance",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"update-balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update masafr balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tYXNhZnJcL2xvZ2luIiwiaWF0IjoxNjM1MTA3MTE5LCJleHAiOjE2MzU0MDcxMTksIm5iZiI6MTYzNTEwNzExOSwianRpIjoiNkp6M1c1Nm5lZDZvUE9WSCIsInN1YiI6MSwicHJ2IjoiOGYwMjM5NzFiMWQwNzkyNmJkYTAwNzliZWViOWE3ZDk1NDRkMjU3NSJ9.bWyhsH2_1O7Hzs6_5a2l8dwv8BCYCm7rhs28KeUbbMw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balance\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://msafr.we-work.pro/api/auth/masafr/update-balance",
+					"protocol": "https",
+					"host": [
+						"msafr",
+						"we-work",
+						"pro"
+					],
+					"path": [
+						"api",
+						"auth",
+						"masafr",
+						"update-balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

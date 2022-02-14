@@ -1,0 +1,98 @@
+first type
+
+{
+    "type_of_trips": 1,
+    "type_of_services": 6,
+    "from_place": "tanta",
+    "from_longitude": "12.255",
+    "from_latitude": "15.3245",
+    "to_place": "alex",
+    "to_longitude": "40.2155",
+    "to_latitude": "30.21456",
+    "max_day": "2021-09-19",
+    "delivery_to": 1,
+    "photo": "abcd.png",
+    "description": "nonee",
+    "only_women": 1
+}
+
+#####################################################
+second type
+
+{
+    "type_of_trips": 2,
+    "type_of_services": 5,
+    "from_place": "tanta",
+    "from_longitude": "12.255",
+    "from_latitude": "15.3245",
+    "to_place": "alex",
+    "to_longitude": "40.2155",
+    "to_latitude": "30.21456",
+    "max_day": "2021-09-19",
+    "delivery_to": 1,
+    "photo": "abcd.png",
+    "description": "nonee",
+    "only_women": 1,
+    "have_insurance": 0,
+    "website_service": "amazon.com"
+}
+
+
+######################################################
+
+third type
+
+
+
+{
+    "type_of_trips": 3,
+    "type_of_services": 2,
+    "from_place": "tanta",
+    "from_longitude": "12.255",
+    "from_latitude": "15.3245",
+    "to_place": "alex",
+    "to_longitude": "40.2155",
+    "to_latitude": "30.21456",
+    "description": "nonee",
+    "only_women": 1,
+    "number_of_passengers": 14,
+    "type_of_car": 1
+}
+
+
+###################################################
+fourth type
+
+{
+    "type_of_trips": 4,
+    "type_of_services": 3,
+    "from_place": "tanta",
+    "from_longitude": "12.255",
+    "from_latitude": "15.3245",
+    "max_day": "2021-09-19",
+    "photo": "abcd.png",
+    "description": "nonee",
+    "only_women": 1
+}
+################################
+
+ 		{
+    "type_of_trips": 1,
+    "type_of_services": 3,
+    "from_place": "tanta5",
+    "from_longitude": "12.235315",
+    "from_latitude": "21.3651",
+    "to_place": "alex5" ,
+    "to_longitude": "1351",
+    "to_latitude": "2552.31",
+    "max_day": 12,
+    "delivery_to": 1,
+    "photo": "abc.jpg",
+    "description": "test",
+    "only_women": 0,
+    "have_insurance": 1,
+    "insurance_value": 70,
+    "website_service": 20,
+    "number_of_passengers": 4,
+    "type_of_car": 1
+    }

@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "875b39fd-c106-4c5c-b51e-d63c965b774b",
+		"name": "project grduation local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "eslam elbanna",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "eslam@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "eslam123",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123456789",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2000-01-25",
+							"type": "text"
+						},
+						{
+							"key": "id_number",
+							"value": "147852369",
+							"type": "text"
+						},
+						{
+							"key": "job",
+							"value": "software engineer",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_photo",
+							"type": "file",
+							"src": "/F:/web/images/1.jpg"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/F:/web/images/1.png"
+						},
+						{
+							"key": "main_address",
+							"value": "tanta",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eslam@gmail.com\",\r\n    \"password\": \"eslam123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzMzk4ODMzMywiZXhwIjoxNjMzOTkxOTMzLCJuYmYiOjE2MzM5ODgzMzMsImp0aSI6Im5VZXpQWnBMS01rS05YMmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6zmASApfzBKtKlmpTM3K3WFgYR-d18ZSxBFPfkHMlUI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make lost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzMzk4ODMzMywiZXhwIjoxNjMzOTkxOTMzLCJuYmYiOjE2MzM5ODgzMzMsImp0aSI6Im5VZXpQWnBMS01rS05YMmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6zmASApfzBKtKlmpTM3K3WFgYR-d18ZSxBFPfkHMlUI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "mobile phone",
+							"type": "text"
+						},
+						{
+							"key": "expected_lost_date",
+							"value": "2021-10-10",
+							"type": "text"
+						},
+						{
+							"key": "expected_lost_place",
+							"value": "tanta",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "labla",
+							"type": "text"
+						},
+						{
+							"key": "attach",
+							"type": "file",
+							"src": "/F:/web/images/30.jpg"
+						},
+						{
+							"key": "first_color",
+							"value": "red",
+							"type": "text"
+						},
+						{
+							"key": "second_color",
+							"value": "green",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "samsung",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "we",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/needer/make-lost",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"needer",
+						"make-lost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make found",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzMzk4ODMzMywiZXhwIjoxNjMzOTkxOTMzLCJuYmYiOjE2MzM5ODgzMzMsImp0aSI6Im5VZXpQWnBMS01rS05YMmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6zmASApfzBKtKlmpTM3K3WFgYR-d18ZSxBFPfkHMlUI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "mobile phone",
+							"type": "text"
+						},
+						{
+							"key": "found_date",
+							"value": "2021-10-10",
+							"type": "text"
+						},
+						{
+							"key": "found_place",
+							"value": "tanta",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "labla",
+							"type": "text"
+						},
+						{
+							"key": "attach",
+							"type": "file",
+							"src": "/F:/web/images/30.jpg"
+						},
+						{
+							"key": "first_color",
+							"value": "red",
+							"type": "text"
+						},
+						{
+							"key": "second_color",
+							"value": "green",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "samsung",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "we",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/helper/make-found",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"helper",
+						"make-found"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lostes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzMzk4ODMzMywiZXhwIjoxNjMzOTkxOTMzLCJuYmYiOjE2MzM5ODgzMzMsImp0aSI6Im5VZXpQWnBMS01rS05YMmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6zmASApfzBKtKlmpTM3K3WFgYR-d18ZSxBFPfkHMlUI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "personal",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/get-lostes",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-lostes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
