@@ -1323,7 +1323,7 @@ trait GeneralTrait
                 //     ->paginate($request->paginateCount);
 
                 $chat_rooms = Message::where('user_id', Auth::user()->id)
-                    ->whereHas('masafr.trip', function ($q) {
+                    ->whereHas('masafr.trips', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
                     })
                     ->with(['masafr' => function ($q) {
@@ -1338,7 +1338,7 @@ trait GeneralTrait
                 //     ->paginate($request->paginateCount);
 
                 $chat_rooms = Message::where('masafr_id', Auth::user()->id)
-                    ->whereHas('masafr.trip', function ($q) {
+                    ->whereHas('masafr.trips', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
                     })
                     ->with(['user' => function ($q) {
