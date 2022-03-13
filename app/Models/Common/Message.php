@@ -3,6 +3,7 @@
 namespace App\Models\Common;
 
 use App\Models\Masafr\Masafr;
+use App\Models\Masafr\Trips;
 use App\Models\User\RequestService;
 use App\Models\User\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -77,5 +78,13 @@ class Message extends Model
     public function getUpdatedAtAttribute($value)
     {
         return $value ?? '';
+    }
+
+    public function trip(){
+        return $this->belongsTo(Trips::class,'related_trip', 'id');
+    }
+
+    public function requestService(){
+        return $this->belongsTo(RequestService::class,'related_request_service', 'id');
     }
 }

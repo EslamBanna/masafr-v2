@@ -527,7 +527,8 @@ trait GeneralTrait
                 // return $trip;
                 $request_service = RequestService::where('id', $requestTrip->request_id)
                     ->where('from_place', 'like', '%' . $trip->from_place . '%')
-                    ->orWhere('to_place', 'like', '%' . $trip->to_place . '%')->get();
+                    ->orWhere('to_place', 'like', '%' . $trip->to_place . '%')
+                    ->get();
                 if (count($request_service) == 0) {
                     return $this->returnError('204', 'هذة الرحلة لا تتوافق مع طلب العميل');
                 }
@@ -1329,6 +1330,20 @@ trait GeneralTrait
                     ->with(['masafr' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
+                    // ->with(['trip.tripCategory' => function ($q) {
+                    //     $q->select('id', 'categorie_name');
+                    // }])
+
+                    ->with(['trip' => function ($q) {
+                        $q->select('id','type_of_trips')->with(['tripCategory' => function($q){
+                            $q->select('id', 'categorie_name');
+                        }]);
+                    }])
+                    ->with(['requestService' => function ($q) {
+                        $q->select('id','type_of_trips')->with(['service' => function($q){
+                            $q->select('id', 'categorie_name');
+                        }]);
+                    }])
                     ->paginate($request->paginateCount);
             } else if ($type == 1) {
                 // $chat_rooms = Message::where('masafr_id', Auth::user()->id)
@@ -1344,11 +1359,21 @@ trait GeneralTrait
                     ->with(['user' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
+                    ->with(['trip' => function ($q) {
+                        $q->select('id','type_of_trips')->with(['tripCategory' => function($q){
+                            $q->select('id', 'categorie_name');
+                        }]);
+                    }])
+                    ->with(['requestService' => function ($q) {
+                        $q->select('id','type_of_trips')->with(['service' => function($q){
+                            $q->select('id', 'categorie_name');
+                        }]);
+                    }])
                     ->paginate($request->paginateCount);
             }
             return $this->returnData('data', $chat_rooms);
         } catch (\Exception $e) {
-            return $this->returnError('201', 'fail');
+            return $this->returnError('201', $e->getMessage());
         }
     }
 
