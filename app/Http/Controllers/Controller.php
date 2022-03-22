@@ -30,23 +30,23 @@ class Controller extends BaseController
                 ->where('end_date', '>', Carbon\Carbon::now())
                 ->orWhere('end_date', null)
                 ->paginate($request->paginateCount);
-            $ended_trips = Trips::where('end_date', '<', Carbon\Carbon::now())
-                ->get();
-            foreach ($ended_trips as $ended_trip) {
-                $trip = Trips::find($ended_trip['id']);
-                if (!$trip) {
-                    return $this->returnError('203', 'fail');
-                }
-                // delete complains 
-                foreach ($trip->complains as $complain) {
-                    foreach ($complain->complainList as $complainListM) {
-                        $complainListM->delete();
-                    }
-                    $complain->delete();
-                }
-                $trip->messageRooms()->delete();
-                $trip->delete();
-            }
+            // $ended_trips = Trips::where('end_date', '<', Carbon\Carbon::now())
+            //     ->get();
+            // foreach ($ended_trips as $ended_trip) {
+            //     $trip = Trips::find($ended_trip['id']);
+            //     if (!$trip) {
+            //         return $this->returnError('203', 'fail');
+            //     }
+            //     // delete complains 
+            //     foreach ($trip->complains as $complain) {
+            //         foreach ($complain->complainList as $complainListM) {
+            //             $complainListM->delete();
+            //         }
+            //         $complain->delete();
+            //     }
+            //     $trip->messageRooms()->delete();
+            //     $trip->delete();
+            // }
             DB::commit();
             return $this->returnData('data', $trips);
         } catch (\Exception $e) {
@@ -58,6 +58,7 @@ class Controller extends BaseController
     public function getAllRequestServices(Request $request)
     {
         try {
+            DB::beginTransaction();
             $trips = null;
             if ($request->has('saudi') && $request->saudi == 1) {
                 $trips = RequestService::whereHas('user', function ($q) {
@@ -75,26 +76,27 @@ class Controller extends BaseController
                     ->withCount('requestTrip as negotiation')
                     ->paginate($request->paginateCount);
             }
-            $ended_request_services = RequestService::where('max_day', '<', Carbon\Carbon::now())
-                ->get();
-            foreach ($ended_request_services as $ended_request_service) {
-                $request_service = RequestService::find($ended_request_service['id']);
-                if (!$request_service) {
-                    return $this->returnError('203', 'fail');
-                }
-                // delete complains 
-                foreach ($request_service->complains as $complain) {
-                    foreach ($complain->complainList as $complainListM) {
-                        $complainListM->delete();
-                    }
-                    $complain->delete();
-                }
-                $request_service->messages()->delete();
-                $request_service->delete();
-            }
+            // $ended_request_services = RequestService::where('max_day', '<', Carbon\Carbon::now())
+            //     ->get();
+            // foreach ($ended_request_services as $ended_request_service) {
+            //     $request_service = RequestService::find($ended_request_service['id']);
+            //     if (!$request_service) {
+            //         return $this->returnError('203', 'fail');
+            //     }
+            //     // delete complains 
+            //     foreach ($request_service->complains as $complain) {
+            //         foreach ($complain->complainList as $complainListM) {
+            //             $complainListM->delete();
+            //         }
+            //         $complain->delete();
+            //     }
+            //     $request_service->messages()->delete();
+            //     $request_service->delete();
+            // }
             DB::commit();
             return $this->returnData('data', $trips);
         } catch (\Exception $e) {
+            DB::rollBack();
             return $this->returnError('201', 'fail');
         }
     }
