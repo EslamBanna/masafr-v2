@@ -1327,6 +1327,13 @@ trait GeneralTrait
                     // ->whereHas('masafr.trips', function ($q) {
                     //     $q->where('end_date', '>', Carbon\Carbon::now());
                     // })
+                    ->whereHas('requestService', function ($q) {
+                        $q->where('max_day', '>', Carbon\Carbon::now());
+                    })
+                    ->whereHas('trip', function ($q) {
+                        $q->where('end_date', '>', Carbon\Carbon::now());
+                    })
+                    // ->orWhereHas('')
                     ->with(['masafr' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
@@ -1335,12 +1342,12 @@ trait GeneralTrait
                     // }])
 
                     ->with(['trip' => function ($q) {
-                        $q->select('id','type_of_trips')->with(['tripCategory' => function($q){
+                        $q->select('id', 'type_of_trips')->with(['tripCategory' => function ($q) {
                             $q->select('id', 'categorie_name');
                         }]);
                     }])
                     ->with(['requestService' => function ($q) {
-                        $q->select('id','type_of_trips')->with(['service' => function($q){
+                        $q->select('id', 'type_of_trips')->with(['service' => function ($q) {
                             $q->select('id', 'categorie_name');
                         }]);
                     }])
@@ -1356,16 +1363,22 @@ trait GeneralTrait
                     // ->whereHas('masafr.trips', function ($q) {
                     //     $q->where('end_date', '>', Carbon\Carbon::now());
                     // })
+                    ->whereHas('trip', function ($q) {
+                        $q->where('end_date', '>', Carbon\Carbon::now());
+                    })
+                    ->whereHas('requestService', function ($q) {
+                        $q->where('max_day', '>', Carbon\Carbon::now());
+                    })
                     ->with(['user' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])
                     ->with(['trip' => function ($q) {
-                        $q->select('id','type_of_trips')->with(['tripCategory' => function($q){
+                        $q->select('id', 'type_of_trips')->with(['tripCategory' => function ($q) {
                             $q->select('id', 'categorie_name');
                         }]);
                     }])
                     ->with(['requestService' => function ($q) {
-                        $q->select('id','type_of_trips')->with(['service' => function($q){
+                        $q->select('id', 'type_of_trips')->with(['service' => function ($q) {
                             $q->select('id', 'categorie_name');
                         }]);
                     }])
