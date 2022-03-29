@@ -1330,7 +1330,7 @@ trait GeneralTrait
                     ->whereHas('requestService', function ($q) {
                         $q->where('max_day', '>', Carbon\Carbon::now());
                     })
-                    ->whereHas('trip', function ($q) {
+                    ->orWhereHas('trip', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
                     })
                     // ->orWhereHas('')
@@ -1366,7 +1366,7 @@ trait GeneralTrait
                     ->whereHas('trip', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
                     })
-                    ->whereHas('requestService', function ($q) {
+                    ->orWhereHas('requestService', function ($q) {
                         $q->where('max_day', '>', Carbon\Carbon::now());
                     })
                     ->with(['user' => function ($q) {
