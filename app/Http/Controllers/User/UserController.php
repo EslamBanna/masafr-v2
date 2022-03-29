@@ -340,9 +340,10 @@ class UserController extends Controller
             if (!$fatoorahList) {
                 return $this->returnError('202', 'fail');
             }
+            if($fatoorahList['accepted'] == 1){
+                return $this->returnError('202', 'تم الموافقة علي الفاتورة من قبل');
+            }
             // return $code_type = $fatoorahList->requestTrip->request->service['two_codes'];
-
-
             if ($request->accept == 0) {
                 // refused
                 $type = (Auth::getDefaultDriver() == 'user-api' ? 0 : 1);
@@ -363,6 +364,7 @@ class UserController extends Controller
                     'balance' => $dues
                 ]);
                 DB::commit();
+                $msgSubjectOutput['res'] = 'no';
                 $msgSubjectOutput['code'] = 1002;
                 $msgSubjectOutput['private_msg'] = 2;
                 $msgSubjectOutput['subject'] = $msgSubject;
@@ -444,6 +446,7 @@ class UserController extends Controller
                 $msgSubjectOutput['user_code'] = 1005;
                 $msgSubjectOutput['masafr_code'] = 1004;
                 $msgSubjectOutput['private_msg'] = 3;
+                $msgSubjectOutput['res'] = 'yes';
                 $msgSubjectOutput['subject'] = $messages;
                 DB::commit();
                 return $this->returnData('data', $msgSubjectOutput);

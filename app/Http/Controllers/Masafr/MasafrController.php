@@ -355,7 +355,7 @@ class MasafrController extends Controller
                     ->latest()
                     ->first();
                 if (!$requestTrip) {
-                    return $this->returnError('204', 'there exists fathoora');
+                    return $this->returnError('204', 'لا يمكن انشاء فاتورة قبل عرض طلب');
                 }
                 if ($requestTrip->request->have_insurance == 1) {
                     if (Auth::user()->balance + ApllicationSetting::find(5)->value < $requestTrip->request->insurance_value) {

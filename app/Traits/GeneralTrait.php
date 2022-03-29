@@ -540,9 +540,12 @@ trait GeneralTrait
                 return $this->returnError('203', 'fail');
             }
             DB::commit();
-            return $this->returnSuccessMessage('success');
+            return $this->returnSuccessMessage('تم التفاوض بنجاح يمكنك انشاء فاتورة');
         } catch (\Exception $e) {
             DB::rollback();
+            if($e->getMessage() == "Attempt to read property \"request_id\" on null"){
+            return $this->returnError('201', "تم التفاوض من قبل");
+            }
             return $this->returnError('201', $e->getMessage());
         }
     }
@@ -917,6 +920,11 @@ trait GeneralTrait
             // return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {
             DB::rollback();
+            if ($e->getMessage() == "Attempt to read property \"trip\" on null") {
+                return $this->returnError('201', "لا يمكن انشاء شكوي قبل ان يتم ربط المحادثة برحلة");
+            } else if ($e->getMessage() == "Attempt to read property \"request\" on null") {
+                return $this->returnError('201', "لا يمكن انشاء شكوي قبل ان يتم ربط المحادثة بطلب");
+            }
             return $this->returnError('201', $e->getMessage());
         }
     }
