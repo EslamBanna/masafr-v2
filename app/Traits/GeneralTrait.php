@@ -494,6 +494,9 @@ trait GeneralTrait
                 if (!$chat) {
                     return $this->returnError('201', 'this chat room deos not exist');
                 }
+                $chat->update([
+                    'related_request_service' => $request->request_id
+                ]);
                 RequestTrip::create([
                     'request_id' => $request->request_id,
                     'chat_id' => $request->chat_id,
@@ -518,6 +521,13 @@ trait GeneralTrait
                 DB::commit();
                 return $this->returnData('data', $msgSubjectOutput);
             } else if ($request->has('trip_id') && $request->has('chat_id')) {
+                $chat = Message::find($request->chat_id);
+                if (!$chat) {
+                    return $this->returnError('201', 'this chat room deos not exist');
+                }
+                $chat->update([
+                    'related_trip' => $request->trip_id
+                ]);
                 $requestTrip =  RequestTrip::where('chat_id', $request->chat_id)
                     ->where('trip_id', -1)
                     ->latest()
@@ -1338,8 +1348,11 @@ trait GeneralTrait
                     ->whereHas('requestService', function ($q) {
                         $q->where('max_day', '>', Carbon\Carbon::now());
                     })
-                    ->orWhereHas('trip', function ($q) {
+                    ->whereHas('trip', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
+                    })
+                    ->whereHas('requestTrip', function ($q) {
+                        $q->where('offer_status', '!=', '5');
                     })
                     // ->orWhereHas('')
                     ->with(['masafr' => function ($q) {
@@ -1374,9 +1387,13 @@ trait GeneralTrait
                     ->whereHas('trip', function ($q) {
                         $q->where('end_date', '>', Carbon\Carbon::now());
                     })
-                    ->orWhereHas('requestService', function ($q) {
+                    ->whereHas('requestService', function ($q) {
                         $q->where('max_day', '>', Carbon\Carbon::now());
                     })
+                    ->whereHas('requestTrip', function ($q) {
+                        $q->where('offer_status', '!=', '5');
+                    })
+                  
                     ->with(['user' => function ($q) {
                         $q->select('id', 'name', 'photo');
                     }])

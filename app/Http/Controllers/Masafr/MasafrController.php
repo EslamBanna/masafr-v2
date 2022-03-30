@@ -512,10 +512,10 @@ class MasafrController extends Controller
                 $q->where('accepted', '1');
             }])
                 ->where('chat_id', $request->message_id)
-                ->where('trip_id', '!=', -1)
-                ->where('receipt_code', '!=', 0)
-                ->where('delivery_code', '!=', 0)
-                ->where('offer_status', '4')
+                // ->where('trip_id', '!=', -1)
+                // ->where('receipt_code', '!=', 0)
+                // ->where('delivery_code', '!=', 0)
+                // ->where('offer_status', '4')
                 ->latest()
                 ->first();
             if ($request->delivery_code == $request_trip->delivery_code) {
